@@ -9,13 +9,14 @@ import (
 	"github.com/tazjin/kontemplate/context"
 	"github.com/tazjin/kontemplate/templater"
 	"github.com/urfave/cli"
+	"github.com/tazjin/kontemplate/cmd"
 )
 
 type KubeCtlError struct {
 	meep.AllTraits
 }
 
-func main() {
+/*func main() {
 	app := cli.NewApp()
 
 	app.Name = "kontemplate"
@@ -30,6 +31,10 @@ func main() {
 	}
 
 	app.Run(os.Args)
+}*/
+
+func main() {
+	cmd.Execute()
 }
 
 func templateCommand() cli.Command {
